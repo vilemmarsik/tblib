@@ -1,0 +1,89 @@
+body { font-size:10px; }
+textarea { font-size:12px; margin:0 0 8px 0; }
+pre { font-size:12px; }
+
+#subnav { display:none; }
+
+.tbl, table.input, .benchtbl { border-collapse:collapse; }
+.tbl td { padding: 2px 3px 3px 4px; }
+.tbl td, .tbl th, table.input td, table.input th, .benchtbl td, .benchtbl th { border: solid 1px black; }
+.tbl th, .benchtbl th {
+	padding: 4px 3px;
+	font-size:110%;
+	font-weight:bold;
+	text-align:center;
+}
+.tbl thead, .benchtbl thead { display:table-header-group; }
+.tbl tbody, .benchtbl tbody { display:table-row-group; }
+a { color: #000; }
+.tbl th a { text-decoration: none; }
+.total { margin-top: 1em; }
+
+input {
+	font-size:10px;
+	border:none;
+}
+input[type="submit"] { display:none; }
+.icon, .mult_submit { display:none; }
+#topframe { display:none; }
+.sqlinfo { display:none; }
+
+/* [multi]selects */
+.inputbody select { display:none; }
+.inputtitle {
+	font-weight: bold;
+	display: inline;
+	float: left;
+	margin-right: 1em;
+	min-width: 8em;
+}
+.inputbody { display:inline; }
+.inputblock.notset { display:none; }
+.inputblock.set {
+	float: left;
+	clear: both;
+}
+hr
+{
+	clear: both;
+	border: none;
+}
+.screen { display: none; }
+
+.success,.error { margin: 1em; }
+.error:before
+{
+	content: 'ERROR : ';
+	font-weight: bold;
+}
+.success:before
+{
+	content: 'SUCCESS : ';
+	font-weight: bold;
+}
+.steps span.nosel { display:none; }
+.steps span.sel a:link, #steps span.sel a:visited
+{
+	display:block;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size:200%;		
+	font-weight: bold;
+}
+.btn,.btn_disabled { display: none; }
+textarea { border: none; }
+.tbl.controls td:last-child, .tbl.controls th:last-child { display:none; }
+.sel_skip { display: none; }
+
+.tbl, .benchtbl {
+	border-spacing: 2px;
+	font-size: 80%;
+}
+.benchtbl td {
+	text-align: center;
+}
+p.benchimg { text-align: center; }
+#bench_graphs h1 {
+	text-align: center;
+	text-transform: capitalize;
+}

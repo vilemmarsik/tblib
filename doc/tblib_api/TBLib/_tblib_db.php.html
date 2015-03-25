@@ -1,0 +1,1277 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page tblib_db.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/tblib_db.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|											<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">TBLib -  DB, and MySQL related functions, mainly for tables</p>
+	<ul class="tags">
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0.php">GNU General Public License</a></li>
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_TBLib__tblib_db.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_tblib_common_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name"><a href="../TBLib/_tblib_common.php.html">'tblib_common.php'</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a12">12</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">shared utils</p>
+	
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|												<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionabort" id="functionabort"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">abort</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a388">388</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">equivalent of die(), rollbacks the transaction before</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			abort
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$msg</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$msg</span><span class="var-description">: text to display  see commit(), rollback(), transaction()</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncached_query" id="functioncached_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">cached_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a642">642</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepares, caches, and executes a query/statement.</p>
+<p class="description"><p>Do not call directly.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> result object</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functioncache_statement">cache_statement()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">MySQLi_Result</span>
+		<span class="method-name">
+			cached_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncache_info" id="functioncache_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">cache_info</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a678">678</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints HTML info about the SQL statement cache.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functioncached_query">cached_query()</a></li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functioncache_statement">cache_statement()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			cache_info
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncache_statement" id="functioncache_statement"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">cache_statement</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a605">605</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prepares statements, stores them in a LRU cache.</p>
+<p class="description"><p>Do not call directly.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the prepared statement</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functioncached_query">cached_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">MySQLi_STMT</span>
+		<span class="method-name">
+			cache_statement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$query</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$query</span><span class="var-description">: the statement to prepare</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncommit" id="functioncommit"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">commit</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a367">367</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">commits a transaction</p>
+<p class="description"><p>see abort(), rollback(), transaction()</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			commit
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionconnect_to_mydb" id="functionconnect_to_mydb"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">connect_to_mydb</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a716">716</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Connects to the database</p>
+	<ul class="tags">
+				<li><span class="field">global:</span> MySQLi $mysqli: resulting DB object</li>
+				<li><span class="field">global:</span> string $mysqlhost: hostname</li>
+				<li><span class="field">global:</span> string $mysqluser: username</li>
+				<li><span class="field">global:</span> string $mysqlpasswd: password</li>
+				<li><span class="field">global:</span> string $mysqldb: database</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connect_to_mydb
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncount_query" id="functioncount_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">count_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a573">573</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets a SQL select, makes it to 'SELECT COUNT(*) FROM ( &lt;original select&gt; ) tbl'.</p>
+<p class="description"><p>Usage: $count = count_query( $query, $format, [ $param1, ... ] )</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> of rows for $select</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">count</span>
+		<span class="method-name">
+			count_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionefields" id="functionefields"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">efields</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a197">197</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns enum table's columns for ID and name, fails on unknown table</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			efields
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioneid" id="functioneid"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">eid</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a205">205</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns enum table's ID column, fails on unknown table</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			eid
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionename" id="functionename"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ename</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a208">208</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns enum table's name column, fails on unknown table</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ename
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_count" id="functionenum_count"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_count</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a311">311</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns count of unique IDs</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_count
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_duplicates" id="functionenum_duplicates"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_duplicates</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a315">315</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">lists all names for a given ID</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_duplicates
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_get_id" id="functionenum_get_id"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_get_id</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a238">238</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gets name, returns ID or null</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_get_id
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_get_id_or_insert" id="functionenum_get_id_or_insert"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_get_id_or_insert</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a288">288</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">checks if a value exists, creates a new one when not, returns the ID</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_get_id_or_insert
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_get_id_wildcard" id="functionenum_get_id_wildcard"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_get_id_wildcard</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a268">268</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gets LIKE pattern ('%' as wildcard), returns array of matches or empty array</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_get_id_wildcard
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$like</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$like</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_get_val" id="functionenum_get_val"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_get_val</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a213">213</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gets ID, returns name or null, caches the values</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_get_val
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_get_val_array" id="functionenum_get_val_array"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_get_val_array</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a227">227</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gets array of IDs, returns array of names</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_get_val_array
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$ids</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ids</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_insert" id="functionenum_insert"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_insert</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a284">284</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">inserts a new name, returns its ID</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_insert
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_list_id" id="functionenum_list_id"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_list_id</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a272">272</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">lists all IDs</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_list_id
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_list_id_val" id="functionenum_list_id_val"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_list_id_val</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a276">276</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">2D listing of ( id, val ), sorted by val</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_list_id_val
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$header</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$header</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_list_val" id="functionenum_list_val"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_list_val</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a280">280</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">lists all vals, sorted</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_list_val
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_map_to_ids" id="functionenum_map_to_ids"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_map_to_ids</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a242">242</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">gets list of names, returns list of IDs, omits unknown names, removes known names from &amp;$names</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_map_to_ids
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">&$names</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$wildcard</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$names</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$wildcard</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_remove_id" id="functionenum_remove_id"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_remove_id</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a297">297</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">removes all rows with a given ID</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_remove_id
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_remove_val" id="functionenum_remove_val"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_remove_val</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a304">304</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">removes all rows with a given value</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			enum_remove_val
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tbl</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tbl</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_translate_row" id="functionenum_translate_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">enum_translate_row</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a321">321</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">translates an array containing IDs to their string representation</p>
+<p class="description"><p>$tr format: ( column1=&gt;table1, column2=&gt;table2, ... )</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			&amp;enum_translate_row
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$row</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tr</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$row</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tr</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionenum_translate_table" id="functionenum_translate_table"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">enum_translate_table</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a330">330</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">runs enum_translate_row on every row in $matrix</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			&amp;enum_translate_table
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$matrix</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$tr</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$skip_header</span> = <span class="var-default">1</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$matrix</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tr</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$skip_header</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionget_create_table" id="functionget_create_table"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">get_create_table</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a164">164</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_create_table
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$table</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$table</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionget_error" id="functionget_error"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">get_error</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a691">691</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns error description</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_error
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioninsert_query" id="functioninsert_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">insert_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a417">417</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a statement or fails.</p>
+<p class="description"><p>usage: insert_query( $query, [$format, $param1, ...] )</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> last inserted ID or 0</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionmatrix_query">matrix_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionrow_query">row_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionvector_query">vector_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionupdate_query">update_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			insert_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionlimit_from_pager" id="functionlimit_from_pager"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">limit_from_pager</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a144">144</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			limit_from_pager
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$pager</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$count</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$pager</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$count</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionlist_tables" id="functionlist_tables"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">list_tables</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a161">161</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Lists all available tables</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			list_tables
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$limit</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionmatrix_hash_query" id="functionmatrix_hash_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">matrix_hash_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a497">497</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a query, returns array of results or empty array.</p>
+<p class="description"><p>Usage: $array = matrix_hash_query( $hash, $header, $limit, $query, $format, [ $param1 ... ] )</p><p>$hash=0 - returns array of arrays; $hash=1 - returns array of hashes  header&lt;&gt;0 - a header returned as the first row; NOTE: excluded from LIMIT clause</p><p>uses some hacks forcing mysqli to return array of results, which is what the s***t cannot do</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 2D array of results</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionrow_query">row_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionvector_query">vector_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionupdate_query">update_query()</a>, <a href="../TBLib/_tblib_db.php.html#functioninsert_query">insert_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			matrix_hash_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionmatrix_query" id="functionmatrix_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">matrix_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a544">544</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a query, returns array of results or empty array.</p>
+<p class="description"><p>Usage: $array = matrix_query( $header, $limit, $query, $format, [ $param1 ... ] )</p><p>header&lt;&gt;0 - a header returned as the first row; NOTE: excluded from LIMIT clause</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 2D array of results</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionrow_query">row_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionvector_query">vector_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionupdate_query">update_query()</a>, <a href="../TBLib/_tblib_db.php.html#functioninsert_query">insert_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			matrix_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionmhash_query" id="functionmhash_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">mhash_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a560">560</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a query, returns array of results or empty array.</p>
+<p class="description"><p>Usage: $arrayhash = mhash_query( $header, $limit, $query, $format, [ $param1 ... ] )</p><p>header&lt;&gt;0 - a header returned as the first row; NOTE: excluded from LIMIT clause</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> of hashes with results</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionrow_query">row_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionvector_query">vector_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionupdate_query">update_query()</a>, <a href="../TBLib/_tblib_db.php.html#functioninsert_query">insert_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			mhash_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionrollback" id="functionrollback"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">rollback</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a377">377</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">rollbacks a transaction</p>
+<p class="description"><p>see abort(), commit(), transaction()</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rollback
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionrow_query" id="functionrow_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">row_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a475">475</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a query, returns first row or empty array.</p>
+<p class="description"><p>usage: row_query( $limit, $query, [$format, $param1, ...] )</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> first row or empty array</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionmatrix_query">matrix_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionvector_query">vector_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionupdate_query">update_query()</a>, <a href="../TBLib/_tblib_db.php.html#functioninsert_query">insert_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			row_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionscalar_query" id="functionscalar_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">scalar_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a433">433</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a query, returns first row first column, or null.</p>
+<p class="description"><p>usage: scalar_query( $query, [$format, $param1, ...] )</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> first row first column, or null</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionmatrix_query">matrix_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionrow_query">row_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionvector_query">vector_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionupdate_query">update_query()</a>, <a href="../TBLib/_tblib_db.php.html#functioninsert_query">insert_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">scalar</span>
+		<span class="method-name">
+			scalar_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionsearch_common" id="functionsearch_common"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">search_common</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a50">50</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Common search code.</p>
+<p class="description"><p>Builds a search query, executes, returns the results.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> 2D array with search results</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			search_common
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$sel</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$from</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$attrs</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">&$attrs_known</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">&$pager</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$sel</span><span class="var-description">: array of attributes to select</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$from</span><span class="var-description">: string containing the join to search from</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$attrs</span><span class="var-description">: requested search values,    in form of array( 'key1,key1,...'=&gt;array(val1,val2,...), ... ).    Specifying multiple values means that all combinations are made, and ORed.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$attrs_known</span><span class="var-description">: array of array(&lt;SQL condition&gt;, &lt;bind format letter&gt;)</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$pager</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontransaction" id="functiontransaction"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">transaction</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a357">357</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">starts a transaction</p>
+<p class="description"><p>see abort(), commit(), rollback()</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			transaction
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionuncached_query" id="functionuncached_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">uncached_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a702">702</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Runs a SQL without preparing and caching.</p>
+<p class="description"><p>Useful for transactions &amp; structure changes,  the MySQL protocol cannot run them as prepared statements.  Do not use for queries - the connection might get blocked.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true/false, number of affected rows, etc.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			uncached_query
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$sql</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$sql</span><span class="var-description">: the SQL statement</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionupdate_query" id="functionupdate_query"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">update_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a401">401</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a statement or fails, returns nr of affected rows.</p>
+<p class="description"><p>usage: update_query( $query, [$format, $param1, ...] )</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> number of affected rows</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionmatrix_query">matrix_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionrow_query">row_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionvector_query">vector_query()</a>, <a href="../TBLib/_tblib_db.php.html#functioninsert_query">insert_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			update_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionvector_query" id="functionvector_query"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">vector_query</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a456">456</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Executes a query, returns first column or empty array.</p>
+<p class="description"><p>usage: vector_query( $limit, $query, [$format, $param1, ...] )</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> first column or empty array</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_db.php.html#functionmatrix_query">matrix_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionrow_query">row_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionscalar_query">scalar_query()</a>, <a href="../TBLib/_tblib_db.php.html#functionupdate_query">update_query()</a>, <a href="../TBLib/_tblib_db.php.html#functioninsert_query">insert_query()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			vector_query
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="function_select_columns" id="function_select_columns"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_select_columns</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_db.php.html#a21">21</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function to process GROUP BY and ORDER BY column specs</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> of selected columns</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			_select_columns
+		</span>
+					(<span class="var-type">$cols</span>&nbsp;<span class="var-name">$cols</span>, <span class="var-type">$by_nr</span>&nbsp;<span class="var-name">$by_nr</span>, <span class="var-type">$by_name</span>&nbsp;<span class="var-name">$by_name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$cols</span>
+				<span class="var-name">$cols</span><span class="var-description">: array of columns</span>			</li>
+					<li>
+				<span class="var-type">$by_nr</span>
+				<span class="var-name">$by_nr</span><span class="var-description">: column number(s) counted from 1, negative to append ' DESC'</span>			</li>
+					<li>
+				<span class="var-type">$by_name</span>
+				<span class="var-name">$by_name</span><span class="var-description">: column names (or any random description, this is not validated)</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 02 Aug 2012 15:21:34 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,202 @@
+/*
+  TOC:
+  ====
+  0. global settings
+  1. navigation - by pkirsch
+  2. table headers & rows
+  3. buttons
+  4. resizeable table bodies
+  5. table row highlights
+*/
+
+
+/* 0. global settings */
+body {
+	color:#000;
+}
+
+textarea { font-size:12px; margin:0 0 8px 0; }
+pre { font-size:12px; }
+.row_header
+{
+	background-color: #e0e0e0;
+	font-weight: bold;
+}
+.row_body { padding-bottom: 5px;}
+
+
+/* 1. navigation - by pkirsch */
+
+#subnav-hdr a, #subnav-hdr span {
+	text-decoration:none;
+	color:#fff;
+}
+
+#subnav-hdr a:hover	{ text-decoration:underline; }
+
+#subnav-hdr a .board_new {
+	color:#ff0;
+	font-weight:bold;
+}
+
+
+/* 2. table headers & rows */
+.tbl th, .benchtbl th { padding: 4px 3px; }
+.tbl td	{ padding: 2px 3px 3px 4px; }
+.total { margin: 1em; }
+
+/* 3. buttons - taken from phpMyAdmin */
+button.mult_submit { background-color:   transparent; }
+th .mult_submit { border:none; }
+.icon {
+    vertical-align:     middle;
+    padding-right:       0.3em;
+    padding-left:        0.3em;
+}
+td .icon, th .icon { margin: 0; }
+button { display: inline; }
+
+/* 4. resizeable table bodies */
+.tbl tbody {
+        overflow: auto;
+        overflow-x:hidden;
+}
+
+/* 5. table row highlights */
+
+/* buttons */
+.btn_disabled {
+	background-color:#ddd;
+	color:#aaa;
+}
+
+tr.w
+{
+	font-weight: bold;
+	border-style: dashed;
+}
+
+/* Links */
+a.btn:hover	{ text-decoration:underline; }
+
+div.pagesel { margin: 1em; }
+
+/* Forms */
+select[multiple] {height:10em;}
+.static { display: none; }
+.inputblock	{
+	margin-right: 1em;
+	margin-bottom: 1em;
+}
+.input > * { float: left; }
+.input > *:last-child { clear:both; }
+form.input + * { 
+	display:block;
+	clear:both;
+}
+
+.inputtitle
+{
+	display:block;
+	font-weight:bold;
+	margin-bottom: 0.2em;
+	text-transform:capitalize;
+}
+hr
+{
+	clear:both;
+	border: solid #68a 1px;
+	padding:0;
+}
+
+/* SQL info */
+.sqlinfo
+{
+	margin-top: 4em;
+	font-size: 50%;
+}
+.sqlinfo>.header
+{
+	font-weight: bold;
+	margin-right:1em;
+}
+.sqlitem .header:after { content:' : '; }
+.sqlitem { margin-right:1em; }
+
+/* database table description */
+table.tbldesc	{ border-collapse: collapse; }
+.tbldesc th	{
+	background-color: #ccc;
+	font-size:1em;
+}
+.tbldesc td, .tbldesc th	{
+	border: solid 1px black;
+	padding: 4px;
+}
+.tbldesc td		{
+	font-size:0.8em;
+	background-color: #fff;
+}
+.tbldesc td:first-child	{ font-size:1em; }
+
+/* cards */
+.steps span	{ padding:0.2em 1em 0.2em 1em; }
+.steps span.sel { font-weight: bold; }
+.steps a:link, .steps a:visited	{
+	text-decoration: none;
+	color: black;
+}
+.steps a:hover { text-decoration: underline; }
+#card
+{
+	padding: 1em;
+	padding-bottom:2em;
+}
+
+
+
+.space	{ margin-top: 7em; }
+div.controls
+{ margin-top:1em; }
+.allresults
+{
+	display:block;
+	font-size:120%;
+	margin: 1em;
+}
+
+.confirm .message	{ color: #f00; }
+.confirm form {
+	float: left;
+	margin-left:2em;
+}
+
+/* messages */
+.message	{
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 750px;
+	text-align: left;
+	font-weight: bolder;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.message img.close	{
+	float: right;
+	margin-top: -6px;
+	margin-left: -6px;
+	height: 16px;
+}
+
+.error	{
+	color: #222;
+	border-color: red;
+	background-color: #fee;
+}
+.success	{
+	color: #222;
+	border-color: green;
+	background-color: #efe;
+}

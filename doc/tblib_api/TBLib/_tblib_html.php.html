@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page tblib_html.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/tblib_html.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">HTML related functions</p>
+	<ul class="tags">
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0.php">GNU General Public License</a></li>
+				<li><span class="field">filesource:</span> <a href="../__filesource/fsource_TBLib__tblib_html.php.html">Source Code for this file</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_tblib_common_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name"><a href="../TBLib/_tblib_common.php.html">"tblib_common.php"</a></span>)
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a11">11</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">shared utils</p>
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineCHECKBOX"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CHECKBOX</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a712">712</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineCHECK_BOX"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CHECK_BOX</span> = 4
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a713">713</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineHIDDEN"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">HIDDEN</span> = 5
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a714">714</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineHR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">HR</span> = 6
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a715">715</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineMULTISELECT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">MULTISELECT</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a707">707</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineMULTI_SELECT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">MULTI_SELECT</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a706">706</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineSELECT_MULTI"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SELECT_MULTI</span> = 1
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a705">705</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineSELECT_SINGLE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SELECT_SINGLE</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a702">702</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineSINGLESELECT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SINGLESELECT</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a704">704</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineSINGLE_SELECT"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">SINGLE_SELECT</span> = 0
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a703">703</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineTEXTAREA"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">TEXTAREA</span> = 3
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a711">711</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineTEXTROW"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">TEXTROW</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a709">709</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineTEXT_AREA"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">TEXT_AREA</span> = 3
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a710">710</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineTEXT_ROW"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">TEXT_ROW</span> = 2
+			(line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a708">708</a></span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionbase_select" id="functionbase_select"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">base_select</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a796">796</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns HTML code for a selector</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			base_select
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$args</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$size</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$multiple</span>, [<span class="var-type">array|string|int</span>&nbsp;<span class="var-name">$set</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">&#039;notset&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: HTML name</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$size</span><span class="var-description">: number of rows</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$multiple</span><span class="var-description">: appendable multiple HTML clause</span>			</li>
+					<li>
+				<span class="var-type">array|string|int</span>
+				<span class="var-name">$set</span><span class="var-description">: preselected value(s)</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$args</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncheck_user" id="functioncheck_user"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_user</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a128">128</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Redirects to login page when not yet logged in.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_user
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionfield_split" id="functionfield_split"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">field_split</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a886">886</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Wrapper over preg_split.</p>
+<p class="description"><p>Returns null for empty $field.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			field_split
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$field</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$regexp</span> = <span class="var-default">&#039;/[\s,;:|]+/&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$regexp</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionform_to_url" id="functionform_to_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">form_to_url</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a938">938</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			form_to_url
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$base</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$what</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$search</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$base</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$what</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$search</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_div" id="functionhtml_div"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_div</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a625">625</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Inserts the content into a div.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_div
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$class</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$text</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_error" id="functionhtml_error"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_error</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a638">638</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints a message about failed operation.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_error
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$msg</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$msg</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_footer" id="functionhtml_footer"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_footer</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a118">118</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Closes the page, adds some statistics etc.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_footer
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionhtml_groupped_table" id="functionhtml_groupped_table"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_groupped_table</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a323">323</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">HTML contingency table.</p>
+<p class="description"><p>WARNING!! $data needs to be ordered by 'group_y' !! <pre> $data	2D hashmap with results
+ $attrs['group_y']	Y axis attributes, !!! $data must be sorted by this !!!
+ $attrs['group_x']	X axis attributes
+ $attrs['header']	1 to consider $data[0] to be a header
+ $attrs['aggregate_fields']	fields to aggregate into one
+ $attrs['aggregate_name']	name of the resulting column
+ $attrs['aggregate_callback']	callback to aggregate fields into one
+ $attrs['aggregate_arg']		extra argument passed to aggregate_callback
+ $attrs['filter_callback']	callback that can filter out some rows
+ $attrs['filter_arg']		extra argument passed to filter_callback</pre></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_groupped_table
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$args</span> = <span class="var-default">array()</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$args</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_header" id="functionhtml_header"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_header</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a18">18</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints HTML page header.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_header
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$args</span> = <span class="var-default">null</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$title</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$title</span><span class="var-description">: page title</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: ID of the body element</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$args</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_link" id="functionhtml_link"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_link</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a608">608</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints a single HTML link.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_link
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$tip</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: text to display</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL to link to</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tip</span><span class="var-description">: optional tooltip</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_message" id="functionhtml_message"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_message</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a646">646</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints a message (success or error)</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_message
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$msg</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$msg</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_pager_form" id="functionhtml_pager_form"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_pager_form</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a978">978</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_pager_form
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$what</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$base</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$page</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$rpp</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$what</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$base</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$page</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rpp</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$prefix</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_page_selector" id="functionhtml_page_selector"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_page_selector</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a916">916</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">prints a paging selector</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_page_selector
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$count</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$page</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$base</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$middle_width</span> = <span class="var-default">2</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$count</span><span class="var-description">: total pages count</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$page</span><span class="var-description">: number of current page (from $first)</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$base</span><span class="var-description">: base URL for links</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$middle_width</span><span class="var-description">: number of marks in the middle</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_search_form" id="functionhtml_search_form"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_search_form</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a739">739</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns HTML code for a common search form.</p>
+<p class="description"><p>Usage: print html_search_form( $action, array( array($name, $values, $values_got, $type, [$label] ),...))</p><p>$name the HTML name of the control</p><p>$values is array of array( $id, $text )</p><p>$values_got is the data got from HTTP request</p><p>$type: <ol><li>single select</li><li>multi select</li><li>text input (unused $values)</li><li>textarea</li><li>checkbox</li><li>hidden</li><li>horizontal rule</li></ol> $label is the text label to pring, $name by default</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_search_form
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$attrs</span> = <span class="var-default">array()</span>], <span class="var-type">string</span>&nbsp;<span class="var-name">$action</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$action</span><span class="var-description">: URL where the form submit to</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$data</span><span class="var-description">: array of array( $name, $values, $values_got, $type, [ $label ] ) :</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$url</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$attrs</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_span" id="functionhtml_span"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_span</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a619">619</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Inserts the content into a span.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_span
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$class</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$text</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_success" id="functionhtml_success"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_success</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a642">642</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints a message about successful operation.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_success
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$msg</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$msg</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_table" id="functionhtml_table"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_table</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a216">216</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Dumps a 2D array $data to HTML.</p>
+<p class="description"><p>Adds different classes for even and odd rows.  Prints header.<pre>   $data		2D array with results
+   $attrs['links'] 	1D array with URLs; if set, first column will have a link
+   $attrs['callback']	when set, it can append a class to highlight a row
+             the returned value can be '' or should start with a space
+   $attrs['id']	ID for the table element
+   $attrs['class']	class for the table element
+   $attrs['sort']	format for javascript sorter
+		'i' - integer (non-integer data are ignored)
+		's' - string
+		'd' - date
+		'0' - do not sort
+		see http://www.allmyscripts.com/Table_Sort/index.html for more
+		NOTE: set table ID to use this feature
+   $attrs['total']	true to print total row count</pre></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_table
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attrs</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$attrs</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_tag" id="functionhtml_tag"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">html_tag</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a592">592</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generic HTML tag</p>
+<p class="description"><p>$name is tag name, e.g. 'textarea'  $content is the text between opening and closing tag     if none specified, a single xHTML tag will be created  $args are attributes in the form of name=&gt;value</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_tag
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$content</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$args</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$content</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$args</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhtml_text_button" id="functionhtml_text_button"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">html_text_button</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a634">634</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints a clickable button.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			html_text_button
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$text</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$text</span><span class="var-description">: text of the control</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: URL where the control points to</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhttp" id="functionhttp"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">http</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a141">141</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Reads a HTTP request variable or null.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> variable value or null</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|array</span>
+		<span class="method-name">
+			http
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$default</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: name of the request variable</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$default</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionhttp_fetch_all" id="functionhttp_fetch_all"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">http_fetch_all</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a155">155</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Fetches all HTTP arguments at once, using http() with no default.</p>
+<p class="description"><p>call: http_fetch_all('param1','param2',...);</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> variables $param1, $param2, ... are set.</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">global</span>
+		<span class="method-name">
+			http_fetch_all
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionmake_controls_row" id="functionmake_controls_row"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">make_controls_row</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a545">545</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds control icons to a table row</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_html.php.html#functionhtml_text_button">html_text_button()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			make_controls_row
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$row</span>, <span class="var-type">$index_val</span>&nbsp;<span class="var-name">$index_val</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$ctrls</span>, <span class="var-type">$index</span>&nbsp;<span class="var-name">3</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$row</span><span class="var-description">: the row</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$ctrls</span><span class="var-description">: hash of ($text=&gt;$url)</span>			</li>
+					<li>
+				<span class="var-type">$index</span>
+				<span class="var-name">3</span><span class="var-description">: index of the column to append to $url</span>			</li>
+					<li>
+				<span class="var-type">$index_val</span>
+				<span class="var-name">$index_val</span><span class="var-description">: the value to append to each URL</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionmake_links_row" id="functionmake_links_row"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">make_links_row</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a561">561</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts one table row to links.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> converted row</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib.php.html#functiontable_translate">table_translate()</a>, <a href="../TBLib/_tblib_html.php.html#functionmake_controls_row">make_controls_row()</a>, <a href="../TBLib/_tblib_db.php.html#functionenum_translate_row">enum_translate_row()</a>, <a href="../TBLib/_tblib_html.php.html#functiontransform_url_row">transform_url_row()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">the</span>
+		<span class="method-name">
+			&amp;make_links_row
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$row</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$orig</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$l</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$row</span><span class="var-description">: the table row to output</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$orig</span><span class="var-description">: original row values</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$l</span><span class="var-description">: array of ($column1=&gt;$base_1, ... )</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionnav_bar" id="functionnav_bar"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">nav_bar</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a171">171</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints the upper QADB navigation menu.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			nav_bar
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$destinations</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$destinations</span><span class="var-description">: destinations array of array( &lt;URL&gt;, &lt;text&gt;)</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionpager_fill_from_http" id="functionpager_fill_from_http"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">pager_fill_from_http</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a963">963</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			pager_fill_from_http
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">&$pager</span> = <span class="var-default">array()</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$prefix</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$pager</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$prefix</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionsanitize_number" id="functionsanitize_number"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">sanitize_number</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a892">892</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Rounds $num to $valid_digits valid digits.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sanitize_number
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$num</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$valid_digits</span> = <span class="var-default">5</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$num</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$valid_digits</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionsteps" id="functionsteps"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">steps</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a824">824</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints card-like structure that can be used to divide something into steps.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			steps
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$base</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$what</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$selected</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$what</span><span class="var-description">: array of array( &lt;label&gt;, &lt;link&gt; )</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$selected</span><span class="var-description">: index of selected card</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$base</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontable_add_checkboxes" id="functiontable_add_checkboxes"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">table_add_checkboxes</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a506">506</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ads a column with checkboxes</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			table_add_checkboxes
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">&$data</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$base_index</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$to_end</span> = <span class="var-default">0</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$form_name</span> = <span class="var-default">&#039;my_form&#039;</span>], [<span class="var-type">int</span>&nbsp;<span class="var-name">$checked</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">&$data</span><span class="var-description">: the table to modify</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: checkbox name</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$base_index</span><span class="var-description">: index of column containing the checkbox value</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$to_end</span><span class="var-description">: zero inserts at beginning, nonzero at end</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$form_name</span><span class="var-description">: name of the form, for javascript access</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$checked</span><span class="var-description">: the initial state of the checkboxes (0/1, all the same)</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontable_htmlspecialchars" id="functiontable_htmlspecialchars"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">table_htmlspecialchars</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a490">490</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts table's data to HTML entities when necessary.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			table_htmlspecialchars
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$data</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$data</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontoken_generate" id="functiontoken_generate"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">token_generate</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a853">853</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generates a token and stores it in the session.</p>
+<p class="description"><p>A update request should send it via HTTP.  The versions in HTTP and session should match, or no update done.  After a successful update, the token should be invalidated.  This can prevent repeated DB updates on reload.  This version stores last tokens in a hash, and removes then upon read,  which allows you to have multiple tabs open.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> the generated token number</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_html.php.html#functiontoken_read">token_read()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			token_generate
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiontoken_read" id="functiontoken_read"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">token_read</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a874">874</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks if a token exists in the session, removes when found.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> true if the token was in the session</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib_html.php.html#functiontoken_generate">token_generate()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">bool</span>
+		<span class="method-name">
+			token_read
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$token</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$token</span><span class="var-description">: the token from HTTP session</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontransform_url_row" id="functiontransform_url_row"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">transform_url_row</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a574">574</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Replaces URL with a simple text inside a link.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> converted row</li>
+				<li><span class="field">see:</span> <a href="../TBLib/_tblib.php.html#functiontable_translate">table_translate()</a>, <a href="../TBLib/_tblib_html.php.html#functionmake_controls_row">make_controls_row()</a>, <a href="../TBLib/_tblib_db.php.html#functionenum_translate_row">enum_translate_row()</a>, <a href="../TBLib/_tblib_html.php.html#functionmake_links_row">make_links_row()</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">the</span>
+		<span class="method-name">
+			&amp;transform_url_row
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">&$row</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$urls</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">&$row</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$urls</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionupdate_result" id="functionupdate_result"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">update_result</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a693">693</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Prints message with result of an update operation.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_result
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$n</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$is_insert</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$msg</span> = <span class="var-default">null</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$n</span><span class="var-description">: return value of the update operation</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$is_insert</span><span class="var-description">: true for insert - will consider $n as new ID</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$msg</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function__selector_element" id="function__selector_element"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">__selector_element</span> (line <span class="line-number"><a href="../__filesource/fsource_TBLib__tblib_html.php.html#a902">902</a></span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__selector_element
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$active</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$highlight</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$url</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$text</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$active</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$highlight</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 02 Aug 2012 15:21:34 +0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.2</a>
+	</p>
+	</div></body>
+</html>

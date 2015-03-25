@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>HTML functions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+body            {
+        background-color:#eee;
+        color:#000;
+        counter-reset:chapter;
+}
+h2:before       {
+        content: counter(chapter) ". ";
+        counter-increment:chapter;
+}
+
+h2      { counter-reset:section; }
+h3:before       {
+        content: counter(chapter) "." counter(section) " ";
+        counter-increment:section;
+}
+table       {
+        border-collapse:collapse;
+        margin-top: 1em;
+}
+th,td   {
+    border: solid 1px black;
+    padding: 4px;
+    }
+th      { background-color: #ccc; }
+td      { background-color: #fff; }
+li      { list-style-type: square; }
+
+hr      { margin: 3em 0 2em 0; }
+
+</style>
+</head>
+<body>
+
+
+<h2>Features</h2>
+<ul>
+	<li>simple, lightweight HTML library for tables and forms</li>
+	<li>client-side table sorting using JavaScript</li>
+	<li>user can change between full height table and scrolling the contents (Firefox only)</li>
+	<li>easy creation of search forms with preselected values</li>
+	<li>clickable tabbed cards</li>
+	<li>update tokens, so that you do not make a new DB row every time you reload your request</li>
+	<li>main navigation bar</li>
+	<li>HTTP request wrapper</li>
+</ul>
+
+<p>
+The library was written for a frontend to the main database in the QA departement of SuSE.
+This means, it can mainly be useful for displaying tables and search forms, or to write database frontends.
+</p>
+
+
+<hr/>
+
+
+<h2>Main navigation</h2>
+<p>
+The function <i>nav_bar()</i> prints a navigation bar, i.e. a horizontal bar with links.
+</p>
+
+<p>
+The function takes a list of pairs of URL and label.
+</p>
+
+<p>
+If you specify <i>'log'</i> in place of a URL, it will be replaced in the following way:
+</p>
+<ul>
+  <li>with <i>$basedir/login.php</i>  if <i>$_SESSION['user']</i> is set</li>
+  <li>with <i>$basedir/logout.php</i> if <i>$_SESSION['user']</i> is not set</li>
+</ul>
+<p>
+You need to set the global variable <i>$basedir</i> in order to use that feature.
+</p>
+
+<pre>
+&lt;?php
+require_once('../tblib/tblib.php');
+print_html_header('test');
+
+$basedir="/qadb";
+$glob_dest=array(
+        array("$basedir/index.php", "Home"),
+        'log' =&gt; array(),
+        array("$basedir/results.php", "Results"),
+        array("$basedir/submission.php", "Submissions"),
+        array("$basedir/regression.php", "Regression Analysis"),
+        array("$basedir/bench/search.php", 'Benchmarks'),
+        array(" "," "),
+        array("$basedir/doc/index.html","API Documentation"));
+
+nav_bar($glob_dest);
+
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<img src="navbar.png" alt="navigation bar"/>
+
+<hr/>
+
+
+
+
+<h2>Tabbed cards</h2>
+<p>
+Following example creates a set of three tabbed cards.
+The second one is selected (<i>$selected</i>), first two are clickable (have an associated URL).
+</p>
+<p>
+<b>NOTE:</b> the function <i>print_steps</i> leaves you with an open <i>div</i> (the card body), you need to close it after.
+</p>
+<pre>
+&lt;?php
+require_once('../tblib/tblib.php');
+print_html_header('test');
+
+$steps=array(
+	array('tab1','test.php?tab=tab1'),
+	array('tab2','test.php?tab=tab2'),
+	array('tab3','')
+);
+$selected=1;
+print_steps($steps,$selected);
+echo 'Tab content';
+
+?&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<img src="steps.png" alt="tabbed card"/>
+
+
+<hr/>
+
+
+
+<h2>Tables</h2>
+<p>
+The function <i>print_table($data,$attrs)</i> was made to print 2D database tables.
+</p>
+<p>
+Of course, you can use it for other tables as well.
+</p>
+
+<h3>Simple table</h3>
+<p>
+This code prints HTML header (to include CSS), defines a small table, and prints it.
+</p>
+<pre>
+&lt;?php
+require_once('../tblib/tblib.php');
+print_html_header('test');
+
+$data=array(
+	array(1,'first'),
+	array(2,'second'),
+	array(3,'third')
+);
+
+print_table($data,array());
+
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<img src="tblsimple.png" alt="simple table"/>
+
+<h3>Sortable table</h3>
+<p>
+You can make your table sortable by specifying <b>both</b> its <i>id</i> <b>and</b> <i>sort</i> attributes.
+The sorting is done entirely on the client site, using JavaScript.
+Sortable tables longer than 20 rows also have a special icon in their upper left corner.
+Clicking this icon toggles between full heigth and reduced heigth with scrollbar.
+</p>
+
+<p>
+Switching between full heigth and reduced heigth/scrolling only works in Mozilla.
+If someone knows how to fix the CSS to work in other browsers, please send it to me.
+</p>
+
+<h4>The 'sort' attribute</h4>
+<p>Concatenated types of columns.</p>
+<table>
+  <tr><th>value</th><th>type</th><th>comment</th></tr>
+  <tr><td>i</td><td>integer</td><td>only the digits at the start work, integers inside the &lt;a&gt; tag don't</td></tr>
+  <tr><td>s</td><td>string</td><td>common string sorting</td></tr>
+  <tr><td>d</td><td>date</td><td>common US date format YYYY-MM-DD seems to work on English pages</td></tr>
+  <tr><td>0</td><td>ignore</td><td>this column is not sortable</td></tr>
+</table>
+
+<h3>Table colors</h3>
+
+<h4>Default colors</h4>
+<p>The default table class <i><b>tbl</b></i> prescribes blue table header and grey table body, slightly different for even and odd rows.
+</p>
+<p>
+These rows are highlighted, when the user moves the rodent pointer over them.
+In CSS, it looks like:
+</p>
+
+<pre>
+.evenrow						{ background-color:#fff; }
+.oddrow							{ background-color:#eee; }
+.evenrow:hover, .oddrow:hover				{ background-color:#eec; }
+</pre>
+
+<h4>Custom colors</h4>
+
+<p>
+In order to highlight let's say the rows with failed cases by another color, define CSS rule for another class.
+The rows will still be in class <i>evenrow</i> or <i>oddrow</i>, plus in your new class, say <i>failed</i>.
+</p>
+<pre>
+.failed.evenrow						{ background-color:#fbb; }
+.failed.oddrow						{ background-color:#eaa; }
+.failed.evenrow:hover, .failed.oddrow:hover		{ background-color:#f44; }
+</pre>
+
+<p>
+Define as many classes as you need.
+</p>
+
+<h4>Colorizing using a function</h4>
+
+<p>
+The easiest way to highlight some lines is writing a callback that assings additional classes to the table rows.
+The callback should return something appendable to the default class <i>evenrow / oddrow</i>, i.e. either an empty string ( for the default color ), or class (or class list) strarting with a space.
+</p>
+
+<p>
+This callback is then passed to the function <i>print_table()</i> in the parameter <i>callback</i>:
+</p>
+
+
+<pre>
+...
+print_table( $data, array(
+	'callback'=&gt;'highlight_results',
+	'id'=&gt;'reslist',
+	'sort'=&gt;'issiiiiis'
+));
+...
+
+function highlight_results()
+{
+	$classes='';
+	$data=func_get_args();
+	if( $data[5] ) $classes=' internalerr';
+	if( $data[4] ) $classes=' failed';
+	return $classes;
+}
+</pre>
+
+<img src="col2.png" alt="coloured lines 2"/>
+
+<h4>Colorizing using a hidden table column</h4>
+<p>Sometimes the colorizing needs more data than those available in the callback function.
+Then you can count the colour before displaying the table, and store it in an invisible table column.
+</p>
+<p>
+A table had 11 columns, the class was added as the 12th column since row 1.
+The 11th column does not exist in the table header row, which means it is not displayed (<i>print_table()</i> only prints as many columns as in the table header).
+</p>
+<p>
+In the colorizing function we just need to return the value:
+</p>
+<pre>
+...
+print_table( $data, array(
+	'callback'=&gt;'colorize'
+	...
+));
+...
+
+function colorize()
+{
+	$data=func_get_args();
+	return $data[12];
+}
+</pre>
+
+<img src="col3.png" alt="coloured lines 3"/>
+
+
+
+
+<hr/>
+
+
+
+
+
+<h2>Forms</h2>
+<p>
+The function <i>print_search_form</i> can easily print forms that contain following input types:
+</p>
+<p>
+0. single select<br/>
+1. multiple select<br/>
+2. text field<br/>
+3. textarea<br/>
+4. checkbox<br/>
+5. hidden<br/>
+</p>
+
+<p>
+Specify the input field as:
+</p>
+<pre>
+$what = array( 
+	array( $name, $values, $preselect, $type, [ $caption ] ),
+	...
+);
+</pre>
+
+<p>
+<i>$values</i> is only used for selects.
+</p>
+<p>
+When $caption is omitted, $name is used to print the caption.
+</p>
+
+<pre>
+&lt;?php
+require_once('../tblib/tblib.php');
+print_html_header('test');
+
+# data for selects
+$data=array(
+	array(1,'first'),
+	array(2,'second'),
+	array(3,'third'),
+	array(4,'fourth'),
+);
+
+# the form definition
+$what=array(
+	array( 'singleselect', $data, 3, 0 ),
+	array( 'multiselect', $data, array(2,4), 1 ),
+	array( 'text', '', 'your name', 2),
+	array( 'checkbox', '', 1, 4 ),
+	array( 'textarea', '', file_get_contents('/etc/passwd'), 3 ),
+	array( 'hidden', '', 'daemon', 5 ),
+);
+
+# print it
+print_search_form( 'test.php', $what );
+
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+<img src="form.png" alt="form example"/>
+
+
+<hr/>
+
+
+
+
+<h2>Update tokens</h2>
+
+<p>
+Update tokens can prevent the system to create/delete a row every time the client reloads a request.
+</p>
+
+<h3>Usage</h3>
+<pre>
+$token = token_generate();
+</pre>
+<p>
+Now you have a token generated, you can send it using a form as a hidden variable:
+</p>
+<pre>
+...
+$what[]=array('wtoken','',$token,5);
+print_search_form('update.php',$what);
+</pre>
+
+On the receiver page, you simply compare the request data with those stored in the session:
+<pre>
+if( token_read(http('wtoken')) )
+{
+	# here you can do the update
+	...
+}
+else
+{
+	# reloaded request, ignore
+}
+</pre>
+
+<h3>How it works</h3>
+<p>
+The function <i>token_generate()</i> generates a new token (number from 1000 to 9999), and stores it in the <i>$_SESSION['token']</i> array.
+</p>
+<p>
+Up to 10 tokens can simultaneously exist in the session, so that the user can open multiple tabs in his browser and do multiple simultaneous updates.
+</p>
+<p>
+The function <i>token_read()</i> simply looks for the token in the session data, and succeeds when found.
+The found token is removed from the session, so that it cannot be reused.
+</p>
+
+</body>
+</html>
